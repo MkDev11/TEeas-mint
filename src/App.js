@@ -203,20 +203,22 @@ function App() {
     <s.Screen>
       <s.Container
         flex={1}
+        posistion={'fixed'}
         ai={"center"}
-        style={{ padding: 24, backgroundColor: "var(--primary)" }}
+        style={{ padding: 40, backgroundColor: "var(--primary)" }}
         image={CONFIG.SHOW_BACKGROUND ? "/config/images/bg.png" : null}
+        width={'600%'}
       >
 
         <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
-        <s.SpacerSmall />
-        <s.TextTitle
-      style={{ fontWeight: 675, verticalAlign:'Center', textShadow:'2px 2px #2F4F4F' ,color: "var(--accent-text)"}}
+        <s.SpacerSmall style={{paddingBottom:55}}/>
+        <s.TextTitle 
+      style={{ fontWeight: 675, verticalAlign:'Center', textShadow:'2px 2px #2F4F4F' ,color: "var(--primary-text)"}}
           >
           Mint your Third Eye Ape v2 NFT Today!!
                 </s.TextTitle>
                 <s.SpacerSmall />
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+        <ResponsiveWrapper flex={1} padding-top={'40px'} style={{ padding: 75, paddingTop: 100}} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg alt={"example"} src={"/config/images/example.gif"} />
           </s.Container>
@@ -238,7 +240,7 @@ function App() {
                 textAlign: "center",
                 fontSize: 50,
                 fontWeight: "bold",
-                color: "var(--accent-text)",
+                color: "var(--secondary-text)",
               }}
             >
               {data.totalSupply} / {CONFIG.MAX_SUPPLY}
@@ -246,10 +248,12 @@ function App() {
             <s.TextDescription
               style={{
                 textAlign: "center",
-                color: "var(--primary-text)",
+                color: "var(--secondary-text)",
               }}
             >
-              <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
+              <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}style={{
+                color: "var(--accent-text)",
+              }}>
                 {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
               </StyledLink>
             </s.TextDescription>
@@ -274,14 +278,14 @@ function App() {
             ) : (
               <>
                 <s.TextTitle
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
+                  style={{ textAlign: "center", color: "var(--secondary-text)" }}
                 >
                   1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
                   {CONFIG.NETWORK.SYMBOL}.
                 </s.TextTitle>
                 <s.SpacerXSmall />
                 <s.TextDescription
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
+                  style={{ textAlign: "center", color: "var(--secondary-text)" }}
                 >
                   Excluding gas fees.
                 </s.TextDescription>
@@ -293,6 +297,7 @@ function App() {
                       style={{
                         textAlign: "center",
                         color: "var(--accent-text)",
+                        textShadow:'1px 1px MidnightBlue'
                       }}
                     >
                       Connect to the {CONFIG.NETWORK.NAME} network
@@ -400,7 +405,7 @@ function App() {
             }}
           >
             Please make sure you are connected to the right network (
-            {CONFIG.NETWORK.NAME} Mainnet) and the correct address. Please note:
+            {CONFIG.NETWORK.NAME} ) and the correct address. Please note:
             Once you make the purchase, you cannot undo this action.
           </s.TextDescription>
           <s.SpacerSmall />
