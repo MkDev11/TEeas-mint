@@ -8,7 +8,7 @@
   },
   "NFT_NAME": "Third eye society V2",
   "SYMBOL": "TEASv2",
-  "MAX_SUPPLY": 20000,
+  "MAX_SUPPLY": 5000,
   "WEI_COST": 100000000000000000,
   "DISPLAY_COST": 0.1,
   "GAS_LIMIT": 145000,
