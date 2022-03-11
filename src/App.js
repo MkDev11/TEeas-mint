@@ -213,7 +213,7 @@ function App() {
         <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
         <s.SpacerSmall style={{paddingBottom:55}}/>
         <s.TextTitle 
-      style={{ fontWeight: 675, verticalAlign:'Center', textShadow:'2px 2px #2F4F4F' ,color: "var(--primary-text)"}}
+      style={{ fontWeight: 675, verticalAlign:'Center', textShadow:'2px 2px #2F4F4F' ,color: "var(--accent-text)"}}
           >
           Mint your Third Eye Ape v2 NFT Today!!
                 </s.TextTitle>
